@@ -7,11 +7,14 @@ Academic homepage for Yingjin Li, M.Phil. student at HKUST(GZ).
 ## Update the site
 
 - Edit `index.html` to update the biography, publication status, education, or awards.
+- Edit `styles.css` to adjust the layout, colors, and typography.
 - Replace `Yingjin_Li_Academic_CV.pdf` to update the downloadable CV.
 - Replace `profile.png` to update the portrait.
 - Update the month in the footer and `lastmod` in `sitemap.xml` when making substantive changes.
 
-This is a static website with no build dependencies, analytics, or third-party scripts. Styles are included in `index.html`. All key information remains usable without JavaScript.
+This is a static website with no build dependencies, analytics, or third-party scripts. All key information remains usable without JavaScript; a small inline script highlights the current navigation section.
+
+The design uses a warm ivory background, navy and sage accents, responsive publication layouts, and self-hosted DM Sans / DM Serif Display fonts. The font licenses are included in `LICENSE-DM-Sans.txt` and `LICENSE-DM-Serif-Display.txt`. Publication cover graphics are decorative typography, not experimental figures.
 
 ## GitHub Pages
 
