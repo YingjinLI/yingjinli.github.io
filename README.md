@@ -1,25 +1,26 @@
 # Yingjin Li — Academic Homepage
 
-Academic homepage for Yingjin Li, M.Phil. student at HKUST(GZ).
+Live site: https://yingjinli.github.io/
 
-**Website:** https://yingjinli.github.io/
+A responsive static academic portfolio centered on open-world visual anomaly detection, multimodal learning, and vision-language models.
 
-## Update the site
+## Structure
 
-- Edit `index.html` to update the biography, publication status, education, or awards.
-- Edit `styles.css` to adjust the layout, colors, and typography.
-- Replace `Yingjin_Li_Academic_CV.pdf` to update the downloadable CV.
-- Replace `profile.png` to update the portrait.
-- Update the month in the footer and `lastmod` in `sitemap.xml` when making substantive changes.
+- `index.html`: academic content, accessible navigation, publication disclosures.
+- `styles.css`: midnight navy / warm ivory design; responsive layouts; print and reduced-motion support.
+- `hero-manifold.png`: original abstract hero artwork created with OpenAI imagegen. It is a conceptual illustration, not a research result.
+- `road-visual.svg`, `prism-visual.svg`, `fashion-visual.svg`: original editable vector cover illustrations, likewise conceptual.
+- `profile.png`: original portrait.
+- `Yingjin_Li_Academic_CV.pdf`: the current academic CV.
+- Fonts: self-hosted DM Sans and DM Serif Display, with their OFL license files included.
 
-This is a static website with no build dependencies, analytics, or third-party scripts. All key information remains usable without JavaScript; a small inline script highlights the current navigation section.
+The site has no build step, analytics, external scripts, or external font requests. GitHub Pages deploys the root of `main`.
 
-The design uses a warm ivory background, navy and sage accents, responsive publication layouts, and self-hosted DM Sans / DM Serif Display fonts. The font licenses are included in `LICENSE-DM-Sans.txt` and `LICENSE-DM-Serif-Display.txt`. Publication cover graphics are decorative typography, not experimental figures.
+## Content notes
 
-## GitHub Pages
+- ROAD: first author, accepted at NeurIPS 2026, as confirmed by Yingjin Li.
+- PriSM-AD: first author, under review at IEEE Transactions on Multimedia.
+- Fashion image retrieval: CASA 2024; the Springer proceedings were published in 2025.
+- No experimental performance numbers are inferred from the decorative illustrations.
 
-Repository: `YingjinLI/yingjinli.github.io`
-
-In **Settings → Pages**, choose **Deploy from a branch**, then **main** and **/ (root)**. The `.nojekyll` file keeps the site static.
-
-The website uses the profile portrait and relevant biographical information from the owner's previous homepage. Research and CV information were updated from the owner's confirmed materials on October 7, 2026. ROAD is accepted at NeurIPS 2026; PriSM-AD is under review at IEEE Transactions on Multimedia. CASA 2024 denotes the conference, with the Springer proceedings published in 2025.
+Paper status and personal details should be updated from the author's confirmed information.
