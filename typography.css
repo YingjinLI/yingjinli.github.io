@@ -1,0 +1,292 @@
+/* Editorial type scale and a more prominent personal portrait. */
+@media screen {
+  body { font-size: 17px; }
+  .brand-name { font-size: 15px; }
+  nav a { font-size: 14px; }
+  .hero { padding-block: 42px 50px; }
+  .hero-copy { min-width: 0; }
+  .hero-copy > .eyebrow { font-size: 11px; letter-spacing: 1.5px; white-space: normal; }
+  .name-row { margin-top: 18px; }
+  h1 { font-size: clamp(76px, 7.2vw, 100px); }
+  .hero-focus {
+    font-family: var(--serif);
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -.45px;
+    margin-top: 17px;
+    text-wrap: pretty;
+  }
+  .hero-intro { font-size: 17px; line-height: 1.8; max-width: 520px; margin-top: 20px; }
+  .identity { gap: 22px; margin-top: 28px; }
+  .identity img {
+    width: 112px;
+    height: 112px;
+    flex: 0 0 112px;
+    border: 3px solid #b1cec1b3;
+    box-shadow: 0 0 0 6px #c9e3d409, 0 8px 28px #0002;
+    object-position: 50% 24%;
+  }
+  .identity > div { min-width: 0; }
+  .identity strong { font-size: 15px; line-height: 1.6; font-weight: 550; }
+  .identity span { font-size: 13px; line-height: 1.7; margin-top: 7px; }
+  .hero-links { flex-wrap: wrap; gap: 17px 21px; margin-top: 29px; }
+  .button, .hero-links .button, .cv-actions .button { font-size: 13px; padding: 15px 22px; }
+  .social-link, .social-link span { font-size: 12px; }
+  .hero-art figcaption { font-size: 10px; letter-spacing: .2px; flex-wrap: wrap; }
+  .figure-number { font-size: 8px; letter-spacing: .8px; }
+  .art-coordinate { font-size: 9px; letter-spacing: 1.2px; }
+  .news-banner { font-size: 15px; }
+  .news-label { font-size: 11px; }
+  .scroll-link { font-size: 13px; }
+  h2 { font-size: 56px; letter-spacing: -1.5px; }
+  .section-index { font-size: 12px; letter-spacing: 1.8px; }
+  .section-note { font-size: 16px; line-height: 1.7; }
+  .research-themes { flex-wrap: wrap; gap: 14px 28px; }
+  .research-themes > span { font-size: 13px; }
+  .research-themes .icon { width: 17px; height: 17px; }
+  .paper-content h3, .secondary .paper-content h3 {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: -.35px;
+    text-wrap: pretty;
+  }
+  .secondary .paper-content h3 { font-size: 28px; }
+  .paper-description { font-size: 16px; line-height: 1.85; }
+  .venue, .authors { font-size: 14px; line-height: 1.75; }
+  .badge, .author-label { font-size: 12px; }
+  .paper-meta { gap: 10px 14px; }
+  .paper-tags { font-size: 12px; gap: 10px 15px; }
+  summary, .paper-link { font-size: 14px; line-height: 1.6; min-height: 48px; }
+  details ul { font-size: 15px; line-height: 1.8; }
+  .cover-label { font-size: 10px; letter-spacing: 1px; }
+  .cover-subtitle { font-size: 11px; letter-spacing: .1px; }
+  .cover-number { font-size: 21px; }
+  .cover-title { font-size: 44px; }
+  .secondary .cover-title { font-size: 36px; }
+  .background-grid { gap: 64px; }
+  .background-grid h2 { font-size: 44px; }
+  .education-item h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.35; }
+  .date-label { font-size: 11px; letter-spacing: .35px; }
+  .date-label span { font-size: 9px; display: inline-block; margin-top: 4px; }
+  .degree, .education-note { font-size: 14px; line-height: 1.8; }
+  .awards h3 { font-size: 18px; font-weight: 500; }
+  .awards p { font-size: 14px; line-height: 1.7; }
+  .awards li { padding-block: 24px; }
+  .contact-copy h2 { font-size: 48px; }
+  .contact-copy .eyebrow { font-size: 11px; }
+  .contact-copy > p:not(.eyebrow) { font-size: 15px; }
+  .contact-email { font-size: 17px; }
+  .cv-actions > span, .cv-actions .english { font-size: 12px; }
+  footer p, .source-link { font-size: 12px; }
+  .footer-brand { font-size: 25px; }
+}
+
+@media screen and (max-width: 1150px) {
+  .hero { grid-template-columns: 1.18fr .82fr; }
+  h1 { font-size: 82px; }
+  .hero-focus { font-size: 29px; }
+  .hero-intro { font-size: 16px; }
+  .identity img { width: 104px; height: 104px; flex-basis: 104px; }
+  .identity { gap: 18px; }
+  .identity strong { font-size: 14px; }
+  .identity span { font-size: 12px; }
+  .hero-links { gap: 15px; }
+  .hero-links .button { padding: 14px 18px; font-size: 12px; }
+  .paper-content h3 { font-size: 28px; }
+  .secondary .paper-content h3 { font-size: 26px; }
+  .background-grid { gap: 39px; }
+  .background-grid h2 { font-size: 39px; }
+  .honors-section { padding-left: 26px; }
+  .contact-copy h2 { font-size: 42px; }
+  .contact-email { font-size: 15px; }
+}
+
+@media screen and (max-width: 900px) {
+  .hero { grid-template-columns: 1.15fr .85fr; gap: 12px; }
+  .hero-art { margin: 0; }
+  h1 { font-size: 69px; }
+  .name-row { flex-wrap: wrap; gap: 0 14px; }
+  .chinese-name { font-size: 14px; letter-spacing: 2px; }
+  .hero-focus { font-size: 27px; }
+  .hero-copy > .eyebrow { font-size: 10px; letter-spacing: 1px; }
+  .identity img { width: 96px; height: 96px; flex-basis: 96px; }
+  .identity strong { font-size: 13px; }
+  .identity span { font-size: 12px; }
+  .hero-art figcaption { font-size: 9px; }
+  .art-coordinate { font-size: 7px; letter-spacing: .7px; }
+  .news-banner { font-size: 14px; gap: 13px; }
+  .news-label { font-size: 10px; }
+  .scroll-link { font-size: 11px; gap: 10px; }
+  .section-top { align-items: flex-start; }
+  h2 { font-size: 48px; }
+  .section-note { font-size: 14px; max-width: 210px; padding-top: 30px; }
+  .section-note br { display: none; }
+  .featured { grid-template-columns: .76fr 1.24fr; }
+  .paper-content h3 { font-size: 27px; }
+  .secondary .paper-content h3 { font-size: 25px; }
+  .secondary .cover-title { font-size: 30px; }
+  .cover-label, .road-art .cover-label, .secondary .cover-label { font-size: 8px; letter-spacing: .7px; }
+  .cover-subtitle { font-size: 10px; }
+  .cover-number { font-size: 18px; }
+  .badge, .author-label { font-size: 11px; }
+  .paper-tags { font-size: 11px; }
+  .paper-description { font-size: 16px; }
+  .venue, .authors { font-size: 13px; }
+  .background-grid { grid-template-columns: 1fr; gap: 45px; }
+  .background-grid h2 { font-size: 42px; }
+  .honors-section { border-left: 0; border-top: 1px solid #dce3d5; padding: 37px 0 0; }
+  .education-item { grid-template-columns: 43px 1fr; gap: 20px; }
+  .school-mark { width: 43px; height: 43px; }
+  .timeline:before { left: 21px; }
+  .education-item h3 { font-size: 24px; }
+  .contact-copy h2 { font-size: 38px; }
+  .contact-copy > p:not(.eyebrow) { font-size: 13px; }
+  .contact-email { font-size: 14px; }
+  .cv-actions .button { font-size: 12px; padding: 14px 18px; }
+  .cv-actions > span, .cv-actions .english { font-size: 10px; }
+}
+
+@media screen and (max-width: 700px) {
+  .brand-name { font-size: 13px; }
+  nav { gap: 18px; }
+  nav a { font-size: 13px; }
+  .hero { display: flex; padding-top: 37px; padding-bottom: 32px; gap: 17px; }
+  .hero-copy > .eyebrow { font-size: 10px; letter-spacing: 1.1px; }
+  h1 { font-size: clamp(60px, 14vw, 82px); }
+  .name-row { flex-wrap: nowrap; gap: 13px; }
+  .hero-focus { font-size: 29px; line-height: 1.35; }
+  .hero-intro { font-size: 17px; line-height: 1.8; max-width: 100%; }
+  .identity { gap: 21px; margin-top: 29px; }
+  .identity img { width: 104px; height: 104px; flex-basis: 104px; }
+  .identity strong { font-size: 14px; }
+  .identity span { font-size: 13px; }
+  .hero-links { gap: 18px; margin-top: 27px; }
+  .hero-links .button { font-size: 13px; padding: 14px 18px; }
+  .social-link .icon { height: 20px; width: 20px; }
+  .hero-art { margin: 21px auto 0; }
+  .hero-art figcaption { font-size: 9px; gap: 8px; }
+  .art-coordinate { font-size: 8px; }
+  .figure-number { display: none; }
+  .opening-footer { padding-block: 19px; min-height: 85px; }
+  .news-banner { font-size: 14px; line-height: 1.6; gap: 12px; }
+  .news-label { font-size: 10px; letter-spacing: .7px; }
+  .news-label .icon { width: 16px; height: 16px; }
+  .news-arrow { margin-left: auto; }
+  h2 { font-size: 46px; }
+  .section-top { display: block; }
+  .section-index { font-size: 11px; }
+  .section-note { font-size: 15px; padding-top: 19px; max-width: none; }
+  .research-themes { gap: 12px 21px; }
+  .research-themes > span { font-size: 12px; }
+  .featured { display: block; }
+  .paper-content h3 { font-size: 29px; }
+  .secondary .paper-content h3 { font-size: 28px; }
+  .paper-description { font-size: 16px; line-height: 1.8; }
+  .venue, .authors { font-size: 14px; }
+  .badge, .author-label { font-size: 11px; }
+  .paper-tags { font-size: 11px; }
+  summary, .paper-link { font-size: 13px; }
+  details ul { font-size: 15px; }
+  .cover-label, .road-art .cover-label, .secondary .cover-label { font-size: 9px; letter-spacing: .8px; }
+  .road-art .cover-subtitle, .secondary .cover-subtitle { font-size: 10px; }
+  .cover-title { font-size: 42px; }
+  .secondary .cover-title { font-size: 34px; }
+  .background-grid h2 { font-size: 40px; }
+  .education-item h3 { font-size: 23px; }
+  .degree, .education-note { font-size: 14px; }
+  .date-label { font-size: 11px; line-height: 1.8; }
+  .date-label span { font-size: 8px; }
+  .awards h3 { font-size: 18px; }
+  .awards p { font-size: 14px; }
+  .contact-copy h2 { font-size: 40px; }
+  .contact-copy .eyebrow { font-size: 10px; }
+  .contact-copy > p:not(.eyebrow) { font-size: 14px; }
+  .contact-email { font-size: 14px; flex-wrap: wrap; gap: 9px; }
+  .cv-actions .button { font-size: 13px; }
+  .cv-actions > span, .cv-actions .english { font-size: 12px; }
+  footer p, .source-link { font-size: 11px; }
+}
+
+@media screen and (max-width: 460px) {
+  nav { gap: 16px; }
+  nav a { font-size: 12px; }
+  .nav-cv { padding: 7px 8px; gap: 6px; }
+  .hero-copy > .eyebrow { font-size: 9px; letter-spacing: .8px; }
+  h1 { font-size: clamp(50px, 16.5vw, 68px); }
+  .chinese-name { font-size: 12px; }
+  .hero-focus { font-size: 27px; }
+  .hero-intro { font-size: 16px; line-height: 1.8; }
+  .identity { gap: 17px; }
+  .identity img { width: 96px; height: 96px; flex-basis: 96px; }
+  .identity strong { font-size: 14px; }
+  .identity span { font-size: 12px; }
+  .hero-links { gap: 14px; }
+  .hero-links .button { padding: 14px 16px; font-size: 12px; }
+  .hero-art figcaption { font-size: 8px; letter-spacing: 0; }
+  .art-coordinate { font-size: 7px; }
+  .news-banner { font-size: 13px; gap: 10px; }
+  .news-label { font-size: 9px; gap: 6px; }
+  h2 { font-size: 43px; letter-spacing: -1.2px; }
+  .research-themes > span { font-size: 11px; }
+  .paper-content h3 { font-size: 27px; }
+  .secondary .paper-content h3 { font-size: 26px; }
+  .paper-content, .secondary .paper-content { padding: 24px; }
+  .paper-meta { gap: 9px; }
+  .badge, .author-label { font-size: 10px; }
+  .paper-tags { font-size: 10px; }
+  summary, .paper-link { font-size: 12px; }
+  .cover-label, .road-art .cover-label, .secondary .cover-label { font-size: 8px; letter-spacing: .4px; }
+  .road-art .cover-subtitle, .secondary .cover-subtitle { font-size: 9px; }
+  .secondary .cover-title { font-size: 31px; }
+  .background-grid h2 { font-size: 38px; }
+  .education-item { grid-template-columns: 36px 1fr; gap: 15px; }
+  .school-mark { width: 36px; height: 36px; }
+  .timeline:before { left: 17px; }
+  .education-item h3 { font-size: 22px; }
+  .date-label { font-size: 10px; }
+  .degree, .education-note { font-size: 13px; }
+  .contact-copy h2 { font-size: 32px; line-height: 1.25; }
+  .contact-copy > p:not(.eyebrow) { font-size: 13px; }
+  .contact-email { font-size: 13px; }
+  footer { gap: 14px 20px; }
+}
+
+@media screen and (max-width: 360px) {
+  nav { gap: 10px; }
+  nav a { font-size: 11px; }
+  .hero-copy > .eyebrow { font-size: 8px; letter-spacing: .65px; }
+  h1 { font-size: 52px; }
+  .chinese-name { font-size: 10px; letter-spacing: 1px; }
+  .name-row { gap: 10px; }
+  .hero-focus { font-size: 25px; }
+  .hero-intro { font-size: 16px; }
+  .identity { gap: 14px; }
+  .identity img { width: 86px; height: 86px; flex-basis: 86px; }
+  .identity strong { font-size: 13px; }
+  .identity span { font-size: 11px; }
+  .hero-links { gap: 11px; }
+  .hero-links .button { font-size: 11px; padding: 14px 12px; }
+  .social-link .icon { width: 19px; height: 19px; }
+  .news-banner { font-size: 12px; }
+  .news-label { font-size: 8px; }
+  h2 { font-size: 37px; }
+  .section-note { font-size: 14px; }
+  .paper-content, .secondary .paper-content { padding: 21px; }
+  .paper-content h3 { font-size: 25px; }
+  .secondary .paper-content h3 { font-size: 24px; }
+  .venue, .authors { font-size: 13px; }
+  .badge, .author-label { font-size: 9px; }
+  .paper-tags { font-size: 10px; }
+  summary, .paper-link { font-size: 11px; }
+  .cover-label, .road-art .cover-label, .secondary .cover-label { font-size: 7px; }
+  .secondary .cover-title { font-size: 27px; }
+  .secondary .cover-subtitle { font-size: 8px; }
+  .background-grid h2 { font-size: 35px; }
+  .education-item h3 { font-size: 21px; }
+  .contact-panel { padding: 29px 21px; }
+  .contact-copy h2 { font-size: 28px; }
+  .contact-email { font-size: 11px; gap: 5px; }
+}
