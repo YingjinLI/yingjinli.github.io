@@ -290,3 +290,7 @@
   .contact-copy h2 { font-size: 28px; }
   .contact-email { font-size: 11px; gap: 5px; }
 }
+
+/* Chinese introduction accompanies the English research statement. */
+.hero-intro-zh { max-width: 590px; margin-top: 14px; color: #bacbc7; font-family: var(--sans), "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 16px; line-height: 1.9; text-wrap: pretty; }
+@media screen and (max-width: 600px) { .hero-intro-zh { font-size: 15px; line-height: 1.85; margin-top: 12px; } }
