@@ -21,6 +21,7 @@
   <link rel="preload" href="dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="publications.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,7 +86,7 @@
   <header class="masthead">
     <div class="container nav-inner">
       <a class="brand" href="#about" aria-label="Yingjin Li — back to top"><span class="monogram" aria-hidden="true">YL<span>.</span></span><span class="brand-name">Yingjin Li</span></a>
-      <nav aria-label="Main navigation"><a class="nav-link" href="#about">About</a><a class="nav-link" href="#publications">Research</a><a class="nav-link" href="#education">Background</a><a class="nav-cv" href="Yingjin_Li_Academic_CV.pdf">CV <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a></nav>
+      <nav aria-label="Main navigation"><a class="nav-link" href="#about">About</a><a class="nav-link" href="#publication-list">Publications</a><a class="nav-link" href="#publications">Research</a><a class="nav-link" href="#education">Background</a><a class="nav-cv" href="Yingjin_Li_Academic_CV.pdf">CV <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a></nav>
     </div>
   </header>
   <main id="main">
@@ -115,8 +116,41 @@
         <a class="scroll-link" href="#publications">Explore my research <span aria-hidden="true">↓</span></a>
       </div>
     </div>
+    <section class="bibliography-section container" id="publication-list" aria-labelledby="publication-list-heading">
+      <div class="section-top">
+        <div><p class="eyebrow section-index">01 — PUBLICATIONS</p><h2 id="publication-list-heading">Publication List<span>.</span></h2></div>
+        <p class="section-note">Published work, accepted papers,<br>and current submissions.</p>
+      </div>
+      <ol class="publication-index">
+        <li class="publication-entry" id="publication-road">
+          <span class="publication-number" aria-hidden="true">01</span>
+          <div>
+            <h3 class="bibliography-title">ROAD: Rule-Grounded Context-Aware Open-World Driver Anomaly Detection</h3>
+            <p class="bibliography-authors"><strong>Yingjin Li</strong>, Shuaibo Li, Wei Ma, Zhijie Qiu, Fuxiang Zhai, Sixiang Chen, Zhaolu Kang, and Lei Zhu.</p>
+            <div class="bibliography-meta"><cite>Advances in Neural Information Processing Systems (NeurIPS), 2026</cite><span class="bibliography-status accepted">Accepted</span><span class="bibliography-role">First author</span></div>
+          </div>
+        </li>
+        <li class="publication-entry" id="publication-fashion">
+          <span class="publication-number" aria-hidden="true">02</span>
+          <div>
+            <h3 class="bibliography-title">Fashion Image Retrieval Based on Multimodal Features Enhancement and Fusion</h3>
+            <p class="bibliography-authors"><strong>Yingjin Li</strong>, Shufan He, Zhaojing Wang, Jin Huang, Xinrong Hu, and Li Li.</p>
+            <div class="bibliography-meta"><cite>Computer Animation and Social Agents (CASA 2024)</cite><span class="bibliography-status published">Published</span><span class="bibliography-role">First author</span></div>
+            <p class="bibliography-citation">Springer, CCIS 2374, pp. 118–131, 2025.</p>
+          </div>
+        </li>
+        <li class="publication-entry" id="publication-prism">
+          <span class="publication-number" aria-hidden="true">03</span>
+          <div>
+            <h3 class="bibliography-title">PriSM-AD: Learning Common Normal Priors and Anomaly Semantics for Diffusion-Based Anomaly Detection</h3>
+            <p class="bibliography-authors"><strong>Yingjin Li</strong>, Sixiang Chen, Wenxue Li, Shuaibo Li, Fugee Tsung, and Lei Zhu.</p>
+            <div class="bibliography-meta"><cite>IEEE Transactions on Multimedia (TMM)</cite><span class="bibliography-status review">Under review</span><span class="bibliography-role">First author</span></div>
+          </div>
+        </li>
+      </ol>
+    </section>
     <section class="research-section container" id="publications" aria-labelledby="research-heading">
-      <div class="section-top"><div><p class="eyebrow section-index">01 — SELECTED WORK</p><h2 id="research-heading">Research, in focus<span>.</span></h2></div><p class="section-note">From unseen anomalies to richer<br>multimodal understanding.</p></div>
+      <div class="section-top"><div><p class="eyebrow section-index">02 — SELECTED WORK</p><h2 id="research-heading">Research, in focus<span>.</span></h2></div><p class="section-note">From unseen anomalies to richer<br>multimodal understanding.</p></div>
       <div class="research-themes" aria-label="Research themes"><span><svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>Open-world perception</span><span><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg>Visual anomaly detection</span><span><svg class="icon" aria-hidden="true"><use href="#icon-layers"/></svg>Vision-language models</span></div>
       <article class="publication featured" id="road">
         <div class="paper-art road-art"><div class="cover-top"><span class="cover-label">OPEN-WORLD ANOMALY DETECTION</span><span class="cover-number">01</span></div><img src="road-visual.svg" alt="Conceptual illustration of a car, its road context, and an amber point of interest" width="760" height="660" loading="lazy"><div class="cover-bottom"><span class="cover-title">ROAD</span><span class="cover-subtitle">Rules. Context.<br>Understanding.</span></div></div>
@@ -165,20 +199,20 @@
     <div class="background-wrap">
       <div class="container background-grid">
         <section id="education" aria-labelledby="education-heading">
-          <p class="eyebrow section-index">02 — THE JOURNEY</p><h2 id="education-heading">Academic roots<span>.</span></h2>
+          <p class="eyebrow section-index">03 — THE JOURNEY</p><h2 id="education-heading">Academic roots<span>.</span></h2>
           <div class="timeline">
             <article class="education-item"><div class="school-mark" aria-hidden="true">H<span>GZ</span></div><div><p class="date-label">SEP 2025 — JUN 2027 <span>EXPECTED</span></p><h3>The Hong Kong University of Science and Technology (Guangzhou)</h3><p class="degree">M.Phil. · Data Science and Analytics</p><p class="education-note">Supervisor: Prof. Lei Zhu<br>Red Bird Scholarship recipient</p></div></article>
             <article class="education-item"><div class="school-mark wtu" aria-hidden="true">W<span>TU</span></div><div><p class="date-label">SEP 2021 — JUN 2025</p><h3>Wuhan Textile University</h3><p class="degree">B.Eng. · Data Science and Big Data Technology</p><p class="education-note">Average score: <strong>86.7/100</strong> · Top 5% academically<br>Overall ranking: <strong>1st in major</strong></p></div></article>
           </div>
         </section>
         <section class="honors-section" id="honors" aria-labelledby="honors-heading">
-          <p class="eyebrow section-index">03 — RECOGNITION</p><h2 id="honors-heading">Selected honors<span>.</span></h2>
+          <p class="eyebrow section-index">04 — RECOGNITION</p><h2 id="honors-heading">Selected honors<span>.</span></h2>
           <ul class="awards"><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>National Scholarship</h3><p>Ministry of Education of China · 2024</p></div></li><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>First Prize, Hubei Province</h3><p>China Mathematical Contest in Modeling</p></div></li><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>National First Prize</h3><p>Teddy Cup Data Mining Challenge</p></div></li><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>National First Prize</h3><p>Huazhong Cup Mathematical Modeling Challenge</p></div></li></ul>
         </section>
       </div>
     </div>
     <section class="container contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="contact-panel"><svg class="contact-lines" viewBox="0 0 550 550" fill="none" aria-hidden="true"><g stroke="currentColor"><circle cx="400" cy="270" r="240"/><circle cx="400" cy="270" r="210"/><circle cx="400" cy="270" r="180"/><circle cx="400" cy="270" r="150"/><circle cx="400" cy="270" r="120"/><path d="M160 30 550 500M160 500 550 30"/></g><circle cx="217" cy="116" r="6" fill="currentColor"/></svg><div class="contact-copy"><p class="eyebrow">04 — LET’S CONNECT</p><h2 id="contact-heading">Good research begins<br>with a <em>conversation.</em></h2><p>For research discussions and academic opportunities.</p><a class="contact-email" href="mailto:yli499@connect.hkust-gz.edu.cn">yli499@connect.hkust-gz.edu.cn <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a></div><div class="cv-actions"><a class="button button-mint" href="Yingjin_Li_Academic_CV.pdf" download>Download CV <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg></a><span>Academic CV · PDF</span><span class="english">English proficiency · IELTS 6.5</span></div></div>
+      <div class="contact-panel"><svg class="contact-lines" viewBox="0 0 550 550" fill="none" aria-hidden="true"><g stroke="currentColor"><circle cx="400" cy="270" r="240"/><circle cx="400" cy="270" r="210"/><circle cx="400" cy="270" r="180"/><circle cx="400" cy="270" r="150"/><circle cx="400" cy="270" r="120"/><path d="M160 30 550 500M160 500 550 30"/></g><circle cx="217" cy="116" r="6" fill="currentColor"/></svg><div class="contact-copy"><p class="eyebrow">05 — LET’S CONNECT</p><h2 id="contact-heading">Good research begins<br>with a <em>conversation.</em></h2><p>For research discussions and academic opportunities.</p><a class="contact-email" href="mailto:yli499@connect.hkust-gz.edu.cn">yli499@connect.hkust-gz.edu.cn <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a></div><div class="cv-actions"><a class="button button-mint" href="Yingjin_Li_Academic_CV.pdf" download>Download CV <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg></a><span>Academic CV · PDF</span><span class="english">English proficiency · IELTS 6.5</span></div></div>
     </section>
   </main>
   <footer class="container"><a class="footer-brand" href="#about">Yingjin Li<span>.</span></a><p>© 2026 · Guangzhou, China</p><a class="source-link" href="https://github.com/YingjinLI/yingjinli.github.io">Website source <svg class="icon small" aria-hidden="true"><use href="#icon-external"/></svg></a></footer>
@@ -196,7 +230,7 @@
           else link.removeAttribute('aria-current');
         });
       }, { rootMargin: '-10% 0px -55% 0px' });
-      ['about', 'publications', 'education'].forEach(id => observer.observe(document.getElementById(id)));
+      ['about', 'publication-list', 'publications', 'education'].forEach(id => observer.observe(document.getElementById(id)));
     }
   </script>
 </body>
