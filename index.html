@@ -14,8 +14,8 @@
   <meta property="og:title" content="Yingjin Li 李映进 | HKUST(GZ)">
   <meta property="og:description" content="Yingjin Li (李映进), M.Phil. student at HKUST(GZ), researching visual anomaly detection, multimodal learning and vision-language models. 香港科技大学（广州）李映进的学术主页，研究视觉异常检测、开放世界理解与多模态大模型。">
   <meta property="og:url" content="https://yingjinli.github.io/">
-  <meta property="og:image" content="https://yingjinli.github.io/hero-manifold.png">
-  <meta property="og:image:alt" content="An abstract glass manifold of luminous threads and a single amber point">
+  <meta property="og:image" content="https://yingjinli.github.io/profile.png">
+  <meta property="og:image:alt" content="Portrait of Yingjin Li">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1725'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia' font-size='35' fill='%23cce4d9'%3EYL%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -67,7 +67,8 @@
 }
   </script>
   <link rel="stylesheet" href="observatory.css?v=20261013.2">
-  <script src="observatory.js?v=20261013" defer></script>
+  <link rel="stylesheet" href="gallery.css?v=20261013">
+  <script src="observatory.js?v=20261013.3" defer></script>
 </head>
 <body>
   <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -105,24 +106,25 @@
           <a class="social-link" href="https://github.com/YingjinLI"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a>
         </div>
       </div>
-      <div class="observatory" aria-labelledby="observatory-heading">
-        <div class="observatory-top"><span class="eyebrow" id="observatory-heading">THE RESEARCH OBSERVATORY</span><button class="motion-toggle js-only" id="motion-toggle" aria-pressed="false" aria-label="Pause visual animation"><span aria-hidden="true">Ⅱ</span></button></div>
-        <div class="observatory-coordinate" aria-hidden="true">FIELD NOTES<br>VISION / CONTEXT / MEANING</div>
-        <div class="orbital-stage">
-          <img class="orbit-fallback" src="observatory-poster.svg" alt="A luminous mathematical surface with one amber point outside the familiar pattern" width="600" height="400">
-          <canvas id="manifold" aria-hidden="true"></canvas>
-          <div class="orbit-label orbit-label-normal" aria-hidden="true"><span></span>THE FAMILIAR</div>
-          <div class="orbit-label orbit-label-anomaly" aria-hidden="true"><span></span>THE UNEXPECTED</div>
-          <div class="orbit-reticle" aria-hidden="true">+</div>
+      <aside class="research-gallery" aria-labelledby="gallery-heading">
+        <div class="gallery-heading"><div><p class="eyebrow">SELECTED RESEARCH</p><h2 id="gallery-heading">Ideas, in view<span>.</span></h2></div><span class="gallery-edition" aria-hidden="true">01 — 03</span></div>
+        <div class="gallery-stage">
+          <div class="gallery-grid" aria-hidden="true"></div>
+          <a class="gallery-card gallery-card--road" href="#road" aria-label="Explore ROAD: driver anomaly detection">
+            <div class="gallery-image"><img src="road-visual.svg" alt="Conceptual illustration of a car and its driving context" width="760" height="660"><span class="gallery-tag">NeurIPS 2026</span></div>
+            <div class="gallery-card-caption"><div><h3>ROAD</h3><p>Understanding behavior in context</p></div><span class="gallery-arrow" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="gallery-card gallery-card--prism" href="#prism-ad" aria-label="Explore PriSM-AD: visual anomaly detection">
+            <div class="gallery-image"><img src="prism-visual.svg" alt="Conceptual illustration of regular teal blocks and one distinct amber block" width="760" height="480"></div>
+            <div class="gallery-card-caption"><div><h3>PriSM-AD</h3><p>Finding the unexpected</p></div><span class="gallery-arrow" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="gallery-card gallery-card--fashion" href="#fashion-retrieval" aria-label="Explore multimodal fashion image retrieval">
+            <div class="gallery-image"><img src="fashion-visual.svg" alt="Conceptual illustration of fashion images and shared visual features" width="760" height="480"></div>
+            <div class="gallery-card-caption"><div><h3>Multimodal</h3><p>Connecting visual features</p></div><span class="gallery-arrow" aria-hidden="true">↗</span></div>
+          </a>
         </div>
-        <div class="field-info"><span class="field-index" aria-hidden="true">01 / 03</span><div aria-live="polite"><h3 id="field-title">Beyond the familiar</h3><p id="field-description">How do we recognize what we have never seen?</p></div></div>
-        <div class="field-controls js-only" role="group" aria-label="Explore research themes">
-          <button class="field-button active" data-field="0" aria-pressed="true"><span>01</span> Anomalies</button>
-          <button class="field-button" data-field="1" aria-pressed="false"><span>02</span> Context</button>
-          <button class="field-button" data-field="2" aria-pressed="false"><span>03</span> Semantics</button>
-        </div>
-        <div class="observatory-bottom"><span>AN INTERACTIVE VISUAL STUDY</span><a id="field-link" href="#prism-ad">Explore the research <span aria-hidden="true">↗</span></a></div>
-      </div>
+        <div class="gallery-footer"><span>CONCEPTUAL ILLUSTRATIONS</span><a href="#publications">A closer look <span aria-hidden="true">↓</span></a></div>
+      </aside>
     </section>
     <div class="container opening-footer"><a class="news-banner" href="#road"><span class="news-label"><span class="status-dot" aria-hidden="true"></span>RESEARCH UPDATE</span><span><strong>ROAD</strong> accepted at <strong>NeurIPS 2026</strong></span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><a class="scroll-link" href="#publication-list">A little further down <span aria-hidden="true">↓</span></a></div>
     <section class="bibliography-section container" id="publication-list" aria-labelledby="publication-list-heading">
