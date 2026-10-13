@@ -19,9 +19,6 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1725'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia' font-size='35' fill='%23cce4d9'%3EYL%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="typography.css">
-  <link rel="stylesheet" href="publications.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -69,6 +66,8 @@
   }
 }
   </script>
+  <link rel="stylesheet" href="observatory.css?v=20261013">
+  <script src="observatory.js?v=20261013" defer></script>
 </head>
 <body>
   <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -83,46 +82,62 @@
     <symbol id="icon-layers" viewBox="0 0 24 24"><path d="m3 8 9-5 9 5-9 5-9-5Zm0 4 9 5 9-5M3 16l9 5 9-5"/></symbol>
   </svg>
   <a class="skip" href="#main">Skip to content</a>
+
   <header class="masthead">
     <div class="container nav-inner">
-      <a class="brand" href="#about" aria-label="Yingjin Li — back to top"><span class="monogram" aria-hidden="true">YL<span>.</span></span><span class="brand-name">Yingjin Li</span></a>
-      <nav aria-label="Main navigation"><a class="nav-link" href="#about">About</a><a class="nav-link" href="#publication-list">Publications</a><a class="nav-link" href="#publications">Research</a><a class="nav-link" href="#education">Background</a><a class="nav-cv" href="Yingjin_Li_Academic_CV.pdf">CV <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a></nav>
+      <a class="brand" href="#about" aria-label="Yingjin Li — back to top"><span class="monogram">YL<span>.</span></span><span class="brand-caption">A PERSONAL<br>RESEARCH SPACE</span></a>
+      <nav aria-label="Main navigation"><a class="nav-link" href="#about">About</a><a class="nav-link" href="#publication-list">Publications</a><a class="nav-link" href="#publications">Research</a><a class="nav-link" href="#education">Background</a></nav>
+      <div class="nav-actions"><button id="reader-toggle" class="reader-toggle js-only" aria-pressed="false"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H4Zm16 0h-4a3 3 0 0 0-3 3v14a4 4 0 0 1 4-3h3Z"/></svg><span>Reading mode</span></button><a class="nav-cv" href="Yingjin_Li_Academic_CV.pdf">CV <span aria-hidden="true">↗</span></a></div>
     </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
   <main id="main">
-    <div class="dark-opening">
-      <section class="hero container" id="about" aria-labelledby="name-heading">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>COMPUTER VISION · MULTIMODAL LEARNING</p>
-          <div class="name-row"><h1 id="name-heading">Yingjin Li<span>.</span></h1><span class="chinese-name" lang="zh">李映进</span></div>
-          <h2 class="hero-focus">Understanding the visual world.<br><em>Finding the unexpected.</em></h2>
-          <p class="hero-intro">My research focuses on <strong>open-world anomaly detection</strong>, exploring multimodal learning and large vision-language models for generalizable detection and interpretable reasoning.</p>
-          <div class="identity"><img src="profile.png" alt="Yingjin Li 李映进 — portrait" width="112" height="112"><div><strong>M.Phil. Student · HKUST (Guangzhou)</strong><span>Data Science and Analytics · Prof. Lei Zhu</span></div></div>
-          <div class="hero-links" aria-label="Academic profiles and contact">
-            <a class="button button-mint" href="Yingjin_Li_Academic_CV.pdf">View academic CV <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a>
-            <a class="social-link" href="https://scholar.google.com/citations?user=jC4f6BEAAAAJ&amp;hl=en" aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="#icon-scholar"/></svg><span>Scholar</span></a>
-            <a class="social-link" href="https://github.com/YingjinLI" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg><span>GitHub</span></a>
-            <a class="social-link social-mail" href="mailto:yli499@connect.hkust-gz.edu.cn" aria-label="Email Yingjin Li"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></a>
-          </div>
+    <section class="hero container" id="about" aria-labelledby="name-heading">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>COMPUTER VISION &amp; MULTIMODAL LEARNING</p>
+        <div class="name-row"><h1 id="name-heading">Yingjin Li<span>.</span></h1><span class="chinese-name" lang="zh">李映进</span></div>
+        <h2 class="hero-focus">Seeing beyond<br><em>the expected.</em></h2>
+        <p class="hero-intro">I study <strong>open-world anomaly detection</strong>, exploring multimodal learning and large vision-language models for generalizable detection and interpretable reasoning.</p>
+        <div class="identity"><div class="portrait-frame"><img src="profile.png" alt="Yingjin Li 李映进 — portrait" width="175" height="212" fetchpriority="high"></div><div><span class="identity-label">CURRENTLY AT</span><strong>HKUST (Guangzhou)</strong><span>M.Phil. · Data Science and Analytics</span><span>Supervisor: Prof. Lei Zhu</span><a href="mailto:yli499@connect.hkust-gz.edu.cn">Let’s connect <span aria-hidden="true">↗</span></a></div></div>
+        <div class="hero-links" aria-label="Academic profiles and contact">
+          <a class="button button-dark" href="Yingjin_Li_Academic_CV.pdf">Academic CV <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a>
+          <a class="social-link" href="https://scholar.google.com/citations?user=jC4f6BEAAAAJ&amp;hl=en"><svg class="icon" aria-hidden="true"><use href="#icon-scholar"/></svg>Scholar</a>
+          <a class="social-link" href="https://github.com/YingjinLI"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a>
         </div>
-        <figure class="hero-art">
-          <div class="art-coordinate coordinate-top" aria-hidden="true"><span class="coordinate-cross">+</span><span>BEYOND THE FAMILIAR</span></div>
-          <img src="hero-manifold.png" alt="Abstract visual study: a glass manifold of luminous threads with a single amber point beyond its surface" width="1254" height="1254" fetchpriority="high">
-          <figcaption><span class="caption-line" aria-hidden="true"></span>Patterns, context &amp; the unexpected<span class="figure-number">VISUAL STUDY / 01</span></figcaption>
-        </figure>
-      </section>
-      <div class="container opening-footer">
-        <a class="news-banner" href="#road"><span class="news-label"><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg> LATEST</span><span><strong>ROAD</strong> accepted at <strong>NeurIPS 2026</strong></span><span class="news-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></span></a>
-        <a class="scroll-link" href="#publications">Explore my research <span aria-hidden="true">↓</span></a>
       </div>
-    </div>
+      <div class="observatory" aria-labelledby="observatory-heading">
+        <div class="observatory-top"><span class="eyebrow" id="observatory-heading">THE RESEARCH OBSERVATORY</span><button class="motion-toggle js-only" id="motion-toggle" aria-pressed="false" aria-label="Pause visual animation"><span aria-hidden="true">Ⅱ</span></button></div>
+        <div class="observatory-coordinate" aria-hidden="true">FIELD NOTES<br>VISION / CONTEXT / MEANING</div>
+        <div class="orbital-stage">
+          <img class="orbit-fallback" src="observatory-poster.svg" alt="A luminous mathematical surface with one amber point outside the familiar pattern" width="600" height="400">
+          <canvas id="manifold" aria-hidden="true"></canvas>
+          <div class="orbit-label orbit-label-normal" aria-hidden="true"><span></span>THE FAMILIAR</div>
+          <div class="orbit-label orbit-label-anomaly" aria-hidden="true"><span></span>THE UNEXPECTED</div>
+          <div class="orbit-reticle" aria-hidden="true">+</div>
+        </div>
+        <div class="field-info"><span class="field-index" aria-hidden="true">01 / 03</span><div aria-live="polite"><h3 id="field-title">Beyond the familiar</h3><p id="field-description">How do we recognize what we have never seen?</p></div></div>
+        <div class="field-controls js-only" role="group" aria-label="Explore research themes">
+          <button class="field-button active" data-field="0" aria-pressed="true"><span>01</span> Anomalies</button>
+          <button class="field-button" data-field="1" aria-pressed="false"><span>02</span> Context</button>
+          <button class="field-button" data-field="2" aria-pressed="false"><span>03</span> Semantics</button>
+        </div>
+        <div class="observatory-bottom"><span>AN INTERACTIVE VISUAL STUDY</span><a id="field-link" href="#prism-ad">Explore the research <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+    <div class="container opening-footer"><a class="news-banner" href="#road"><span class="news-label"><span class="status-dot" aria-hidden="true"></span>RESEARCH UPDATE</span><span><strong>ROAD</strong> accepted at <strong>NeurIPS 2026</strong></span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><a class="scroll-link" href="#publication-list">A little further down <span aria-hidden="true">↓</span></a></div>
     <section class="bibliography-section container" id="publication-list" aria-labelledby="publication-list-heading">
       <div class="section-top">
-        <div><p class="eyebrow section-index">01 — PUBLICATIONS</p><h2 id="publication-list-heading">Publication List<span>.</span></h2></div>
-        <p class="section-note">Published work, accepted papers,<br>and current submissions.</p>
+        <div><p class="eyebrow section-index">01 / THE PUBLICATIONS</p><h2 id="publication-list-heading">Publication List<span>.</span></h2></div>
+        <p class="section-note">A record of the questions<br>I have been working on.</p>
+      </div>
+      <div class="publication-tools js-only" role="group" aria-label="Filter publications">
+        <button class="filter-button active" data-filter="all" aria-pressed="true">All work <span>03</span></button>
+        <button class="filter-button" data-filter="published" aria-pressed="false">Published &amp; accepted</button>
+        <button class="filter-button" data-filter="review" aria-pressed="false">Under review</button>
+        <span class="filter-count" aria-live="polite">3 papers</span>
       </div>
       <ol class="publication-index">
-        <li class="publication-entry" id="publication-road">
+        <li class="publication-entry" id="publication-road" data-status="published">
           <span class="publication-number" aria-hidden="true">01</span>
           <div>
             <h3 class="bibliography-title">ROAD: Rule-Grounded Context-Aware Open-World Driver Anomaly Detection</h3>
@@ -130,7 +145,7 @@
             <div class="bibliography-meta"><cite>Advances in Neural Information Processing Systems (NeurIPS), 2026</cite><span class="bibliography-status accepted">Accepted</span></div>
           </div>
         </li>
-        <li class="publication-entry" id="publication-fashion">
+        <li class="publication-entry" id="publication-fashion" data-status="published">
           <span class="publication-number" aria-hidden="true">02</span>
           <div>
             <h3 class="bibliography-title">Fashion Image Retrieval Based on Multimodal Features Enhancement and Fusion</h3>
@@ -139,7 +154,7 @@
             <p class="bibliography-citation">Springer, CCIS 2374, pp. 118–131, 2025.</p>
           </div>
         </li>
-        <li class="publication-entry" id="publication-prism">
+        <li class="publication-entry" id="publication-prism" data-status="review">
           <span class="publication-number" aria-hidden="true">03</span>
           <div>
             <h3 class="bibliography-title">PriSM-AD: Learning Common Normal Priors and Anomaly Semantics for Diffusion-Based Anomaly Detection</h3>
@@ -149,89 +164,90 @@
         </li>
       </ol>
     </section>
-    <section class="research-section container" id="publications" aria-labelledby="research-heading">
-      <div class="section-top"><div><p class="eyebrow section-index">02 — SELECTED WORK</p><h2 id="research-heading">Research, in focus<span>.</span></h2></div><p class="section-note">From unseen anomalies to richer<br>multimodal understanding.</p></div>
-      <div class="research-themes" aria-label="Research themes"><span><svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>Open-world perception</span><span><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg>Visual anomaly detection</span><span><svg class="icon" aria-hidden="true"><use href="#icon-layers"/></svg>Vision-language models</span></div>
-      <article class="publication featured" id="road">
-        <div class="paper-art road-art"><div class="cover-top"><span class="cover-label">OPEN-WORLD ANOMALY DETECTION</span><span class="cover-number">01</span></div><img src="road-visual.svg" alt="Conceptual illustration of a car, its road context, and an amber point of interest" width="760" height="660" loading="lazy"><div class="cover-bottom"><span class="cover-title">ROAD</span><span class="cover-subtitle">Rules. Context.<br>Understanding.</span></div></div>
-        <div class="paper-content">
-          <div class="paper-meta"><span class="badge accepted"><span class="badge-dot" aria-hidden="true"></span>NeurIPS 2026 · Accepted</span></div>
-          <h3>ROAD: Rule-Grounded Context-Aware Open-World Driver Anomaly Detection</h3>
-          <p class="venue">Advances in Neural Information Processing Systems, 2026</p>
-          <p class="paper-description">Integrating driver video, driving context, and behavioral rules to identify previously unseen driver anomalies—and explain why a behavior is abnormal.</p>
-          <div class="paper-tags"><span>Multimodal LLMs</span><span>Context-aware reasoning</span></div>
-          <details><summary>Explore research contributions<span class="expand-icon" aria-hidden="true">+</span></summary><ul>
-            <li>Designed rule-grounded reasoning that translates domain knowledge into structured guidance for multimodal large language models.</li>
-            <li>Integrated context-aware visual reasoning to distinguish similar behaviors across driving situations and account for context-dependent safety rules.</li>
-            <li>Built an evaluation pipeline across driver-monitoring datasets with free-form anomaly descriptions, human assessments, and MLLM baselines.</li>
-          </ul></details>
-        </div>
-      </article>
-      <div class="secondary-papers">
-        <article class="publication secondary" id="prism-ad">
-          <div class="paper-art prism-art"><div class="cover-top"><span class="cover-label">NORMAL PRIORS · ANOMALY SEMANTICS</span><span class="cover-number">02</span></div><img src="prism-visual.svg" alt="Conceptual illustration of a regular array of teal blocks with one distinctive amber block" width="760" height="480" loading="lazy"><div class="cover-bottom"><span class="cover-title">PriSM-AD</span><span class="cover-subtitle">Generative priors.</span></div></div>
-          <div class="paper-content">
-            <div class="paper-meta"><span class="badge review">TMM · Under review</span></div>
-            <h3>PriSM-AD: Learning Common Normal Priors and Anomaly Semantics for Diffusion-Based Anomaly Detection</h3>
-            <p class="venue">IEEE Transactions on Multimedia</p>
-            <p class="paper-description">Combining common normal visual priors with anomaly semantics in a two-stage diffusion framework for defect detection and pixel-level localization.</p>
-            <div class="paper-tags"><span>Diffusion models</span><span>Industrial anomaly detection</span></div>
-            <details><summary>Explore research contributions<span class="expand-icon" aria-hidden="true">+</span></summary><ul>
-              <li>Developed prior-guided reconstruction to recover normal appearance while suppressing anomalous structures.</li>
-              <li>Combined semantic anomaly representations with reconstruction cues to identify subtle defects across industrial categories.</li>
-              <li>Analyzed reconstruction quality, cross-category generalization, anomaly localization, and inference efficiency.</li>
-            </ul></details>
+
+    <section class="research-section" id="publications" aria-labelledby="research-heading">
+      <div class="container">
+        <div class="section-top"><div><p class="eyebrow section-index">02 / INSIDE THE RESEARCH</p><h2 id="research-heading">A closer <em>look.</em></h2></div><p class="section-note">Two ways to make<br>the unexpected understandable.</p></div>
+        <article class="research-study" id="road">
+          <div class="study-heading"><div><span class="study-number">01</span><span class="badge accepted">NeurIPS 2026 · Accepted</span></div><a class="text-link" href="#publication-road">Full citation <span aria-hidden="true">↗</span></a></div>
+          <div class="study-grid">
+            <div class="study-copy"><p class="eyebrow">RULES · CONTEXT · UNDERSTANDING</p><h3>ROAD<span class="title-dot">.</span></h3><h4>The same action.<br><em>A different meaning.</em></h4><p>Integrating driver video, driving context, and behavioral rules to identify previously unseen driver anomalies—and explain why a behavior is abnormal.</p><div class="paper-tags"><span>Multimodal LLMs</span><span>Open-world reasoning</span></div><details><summary>Research contributions <span aria-hidden="true">+</span></summary><ul><li>Designed rule-grounded reasoning that translates domain knowledge into structured guidance for multimodal large language models.</li><li>Integrated context-aware visual reasoning to distinguish similar behaviors across driving situations and account for context-dependent safety rules.</li><li>Built an evaluation pipeline across driver-monitoring datasets with free-form anomaly descriptions, human assessments, and MLLM baselines.</li></ul></details></div>
+            <div class="experiment road-experiment" data-context="parked">
+              <div class="experiment-top"><span class="micro-label">A THOUGHT EXPERIMENT</span><span class="live-indicator">CONTEXT MATTERS</span></div>
+              <div class="driving-scene">
+                <svg viewBox="0 0 640 340" role="img" aria-labelledby="road-scene-title">
+                  <title id="road-scene-title">Illustrative driver looking at a phone, with a switchable parked or driving context</title>
+                  <defs><linearGradient id="car-shell" x1="0" x2="0.5" y2="1"><stop stop-color="#cee3df"/><stop offset="1" stop-color="#426567"/></linearGradient><linearGradient id="car-window" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#437172"/><stop offset="1" stop-color="#102c36"/></linearGradient><linearGradient id="road-sky" x2="0" y2="1"><stop stop-color="#102932"/><stop offset="1" stop-color="#153943"/></linearGradient><radialGradient id="phone-glow"><stop stop-color="#e6b576" stop-opacity=".3"/><stop offset="1" stop-color="#e6b576" stop-opacity="0"/></radialGradient></defs>
+                  <rect width="640" height="340" fill="url(#road-sky)"/>
+                  <g class="scene-buildings" fill="#22414a" opacity=".7"><path d="M0 179V116h38v63M52 179V78h40v101M104 179v-54h27v54M148 179V97h58v82M473 179V106h53v73M546 179V57h37v122M600 179v-90h40v90"/></g>
+                  <g stroke="#b2d3c4" stroke-opacity=".14"><path d="M67 96v48m12-48v48m478-74v59m12-59v59M484 122v32m26-32v32"/></g>
+                  <circle cx="476" cy="66" r="24" fill="#c1dbd1" opacity=".08"/><circle cx="476" cy="66" r="15" fill="#c1dbd1" opacity=".1"/>
+                  <path d="M0 229H640V340H0Z" fill="#0b202a"/><path d="M0 245H640" stroke="#54747a" stroke-opacity=".5"/>
+                  <g class="road-lines" stroke="#9cbdb3" stroke-width="3" stroke-dasharray="47 33"><path d="M-100 305H740"/></g>
+                  <g class="parking-mark"><rect x="55" y="129" width="39" height="43" rx="7" fill="#234e4e" stroke="#84c7b3"/><text x="74" y="159" text-anchor="middle" font-size="29" font-family="sans-serif" fill="#c7e2d5">P</text><path d="M74 173v56M124 283H520" stroke="#86b7ab" stroke-width="2" opacity=".6"/></g>
+                  <ellipse cx="329" cy="267" rx="203" ry="17" fill="#000" opacity=".24"/>
+                  <path d="M145 209 180 197 219 134Q228 119 250 119H367Q390 119 411 149L451 202 491 214Q503 218 503 234V248H134V229Q134 214 145 209Z" fill="url(#car-shell)" stroke="#a3c8bf" stroke-width="1.2"/>
+                  <path d="m197 198 36-60q3-5 13-5h116q16 0 26 16l34 49Z" fill="url(#car-window)" stroke="#9bc4be" stroke-opacity=".7"/>
+                  <path d="M298 131v68M158 213h298M298 201v43" stroke="#42676b" stroke-width="3"/><path d="M260 208h18M370 208h18" stroke="#d3e7df" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M254 197v-22q0-7 7-7h12q7 0 7 10v19M377 197v-17q0-8 9-8" fill="none" stroke="#1d3940" stroke-width="11"/>
+                  <g class="driver"><path d="M340 197v-28q0-10 9-10 12 0 12 13v25" fill="#d7b58a"/><circle cx="350" cy="148" r="12" fill="#edcfaa"/><path d="m359 172 18 13 17-17" stroke="#e8c69d" stroke-width="7" stroke-linecap="round" fill="none"/><rect x="388" y="154" width="12" height="23" rx="3" transform="rotate(10 394 165)" fill="#e7bb78" stroke="#f9d8a8"/><rect x="391" y="157" width="6" height="15" rx="1" fill="#25474e" transform="rotate(10 394 165)"/><circle cx="394" cy="166" r="50" fill="url(#phone-glow)"/></g>
+                  <path d="m419 180-12 18m-3-19 13 9" stroke="#75948f" stroke-width="4"/>
+                  <g class="wheel"><circle cx="214" cy="248" r="32" fill="#0a1921" stroke="#608582" stroke-width="2"/><circle cx="214" cy="248" r="18" fill="#638783"/><circle cx="214" cy="248" r="7" fill="#233e44"/><path d="m202 236 24 24m0-24-24 24" stroke="#b4cfc4" stroke-width="2"/></g>
+                  <g class="wheel"><circle cx="434" cy="248" r="32" fill="#0a1921" stroke="#608582" stroke-width="2"/><circle cx="434" cy="248" r="18" fill="#638783"/><circle cx="434" cy="248" r="7" fill="#233e44"/><path d="m422 236 24 24m0-24-24 24" stroke="#b4cfc4" stroke-width="2"/></g>
+                  <rect x="478" y="219" width="20" height="7" rx="3" fill="#f6d6a0"/><rect x="138" y="218" width="13" height="6" rx="2" fill="#d38c77"/>
+                  <g class="scene-brackets" fill="none" stroke="#e3b776" stroke-width="1.2" opacity=".8"><path d="M321 135v-8h14m66 0h14v8m-94 57v8h14m66 0h14v-8"/></g>
+                </svg>
+                <div class="scene-status"><span class="status-dot" aria-hidden="true"></span><span id="scene-context">SAFELY PARKED</span></div>
+                <div class="observation-chip">OBSERVATION <strong>Looking at a phone</strong></div>
+              </div>
+              <div class="context-controls js-only" role="group" aria-label="Driving context"><span>Change the context</span><div><button data-context="parked" aria-pressed="true" class="active">Parked</button><button data-context="driving" aria-pressed="false">Driving</button></div></div>
+              <div class="reasoning-result" aria-live="polite"><span class="reasoning-kicker" id="reasoning-kicker">CONTEXT-APPROPRIATE</span><p id="reasoning-text">When safely parked, looking at a phone does not conflict with the active task of driving.</p></div>
+              <p class="experiment-note">Illustrative scenario · manually defined responses, not model predictions.</p>
+            </div>
           </div>
         </article>
-        <article class="publication secondary" id="fashion-retrieval">
-          <div class="paper-art fashion-art"><div class="cover-top"><span class="cover-label">MULTIMODAL REPRESENTATION LEARNING</span><span class="cover-number">03</span></div><img src="fashion-visual.svg" alt="Conceptual illustration of layered fashion image cards in sage green and warm cream" width="760" height="480" loading="lazy"><div class="cover-bottom"><span class="cover-title">Image retrieval</span><span class="cover-subtitle">Feature fusion.</span></div></div>
-          <div class="paper-content">
-            <div class="paper-meta"><span class="badge published">CASA 2024 · Published</span></div>
-            <h3><a href="https://doi.org/10.1007/978-981-96-2681-6_9">Fashion Image Retrieval Based on Multimodal Features Enhancement and Fusion</a></h3>
-            <p class="venue">Computer Animation and Social Agents<br>Springer, CCIS 2374, pp. 118–131, 2025</p>
-            <p class="authors"><strong>Yingjin Li</strong>, Shufan He, Zhaojing Wang, Jin Huang, Xinrong Hu, and Li Li</p>
-            <div class="paper-tags"><span>Multimodal learning</span><span>Image retrieval</span></div>
-            <a class="paper-link" href="https://doi.org/10.1007/978-981-96-2681-6_9">Read publication <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a>
+        <article class="research-study" id="prism-ad">
+          <div class="study-heading"><div><span class="study-number">02</span><span class="badge review">TMM · Under review</span></div><a class="text-link" href="#publication-prism">Full citation <span aria-hidden="true">↗</span></a></div>
+          <div class="study-grid prism-grid">
+            <div class="study-copy"><p class="eyebrow">NORMAL PRIORS · ANOMALY SEMANTICS</p><h3>PriSM-AD<span class="title-dot">.</span></h3><h4>Imagine the normal.<br><em>Reveal the anomaly.</em></h4><p>Combining common normal visual priors with anomaly semantics in a two-stage diffusion framework for defect detection and pixel-level localization.</p><div class="paper-tags"><span>Diffusion models</span><span>Industrial vision</span></div><details><summary>Research contributions <span aria-hidden="true">+</span></summary><ul><li>Developed prior-guided reconstruction to recover normal appearance while suppressing anomalous structures.</li><li>Combined semantic anomaly representations with reconstruction cues to identify subtle defects across industrial categories.</li><li>Analyzed reconstruction quality, cross-category generalization, anomaly localization, and inference efficiency.</li></ul></details></div>
+            <div class="experiment prism-experiment">
+              <div class="experiment-top"><span class="micro-label">A VISUAL EXPLANATION</span><button id="heatmap-toggle" class="heatmap-toggle js-only" aria-pressed="false">Show localization <span aria-hidden="true">⊕</span></button></div>
+              <div class="comparison" style="--split:50%">
+                <img src="specimen-normal.svg" width="640" height="420" alt="Illustrated metal ring with a smooth, regular surface" loading="lazy">
+                <div class="comparison-original"><img src="specimen-anomaly.svg" width="640" height="420" alt="The same illustrated ring with an added surface scratch" loading="lazy"></div>
+                <div class="heatmap-overlay" aria-hidden="true"></div>
+                <span class="comparison-label before">ILLUSTRATED INPUT</span><span class="comparison-label after">NORMAL PRIOR</span>
+                <span class="comparison-handle" aria-hidden="true"><span>‹ ›</span></span>
+                <input class="js-only" id="comparison-range" type="range" min="0" max="100" value="50" aria-label="Reconstruction comparison" aria-valuetext="50% illustrated input, 50% normal prior">
+              </div>
+              <div class="comparison-caption"><span class="drag-hint js-only">← Drag to compare →</span><span id="comparison-state">Input ↔ Normal prior</span></div>
+              <div class="prism-process"><span><i>01</i> Observe</span><span aria-hidden="true">→</span><span><i>02</i> Reconstruct</span><span aria-hidden="true">→</span><span><i>03</i> Localize</span></div>
+              <p class="experiment-note">Conceptual artwork · illustrates the reconstruction idea, not experimental results.</p>
+            </div>
           </div>
         </article>
+        <article class="fashion-study" id="fashion-retrieval"><div class="fashion-art"><img src="fashion-visual.svg" alt="Illustrated fashion image cards representing multimodal feature fusion" width="760" height="480" loading="lazy"></div><div><span class="badge published">CASA 2024 · Published</span><h3>Connecting visual features<br><em>through multimodal learning.</em></h3><p>Fashion Image Retrieval Based on Multimodal Features Enhancement and Fusion</p><a class="text-link" href="https://doi.org/10.1007/978-981-96-2681-6_9">Read publication <span aria-hidden="true">↗</span></a></div><span class="fashion-number" aria-hidden="true">03</span></article>
       </div>
     </section>
     <div class="background-wrap">
       <div class="container background-grid">
         <section id="education" aria-labelledby="education-heading">
-          <p class="eyebrow section-index">03 — THE JOURNEY</p><h2 id="education-heading">Academic roots<span>.</span></h2>
+          <p class="eyebrow section-index">03 / THE JOURNEY</p><h2 id="education-heading">Academic roots<span>.</span></h2>
           <div class="timeline">
             <article class="education-item"><div class="school-mark" aria-hidden="true">H<span>GZ</span></div><div><p class="date-label">SEP 2025 — JUN 2027 <span>EXPECTED</span></p><h3>The Hong Kong University of Science and Technology (Guangzhou)</h3><p class="degree">M.Phil. · Data Science and Analytics</p><p class="education-note">Supervisor: Prof. Lei Zhu<br>Red Bird Scholarship recipient</p></div></article>
             <article class="education-item"><div class="school-mark wtu" aria-hidden="true">W<span>TU</span></div><div><p class="date-label">SEP 2021 — JUN 2025</p><h3>Wuhan Textile University</h3><p class="degree">B.Eng. · Data Science and Big Data Technology</p><p class="education-note">Average score: <strong>86.7/100</strong> · Top 5% academically<br>Overall ranking: <strong>1st in major</strong></p></div></article>
           </div>
         </section>
         <section class="honors-section" id="honors" aria-labelledby="honors-heading">
-          <p class="eyebrow section-index">04 — RECOGNITION</p><h2 id="honors-heading">Selected honors<span>.</span></h2>
+          <p class="eyebrow section-index">04 / RECOGNITION</p><h2 id="honors-heading">Selected honors<span>.</span></h2>
           <ul class="awards"><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>National Scholarship</h3><p>Ministry of Education of China · 2024</p></div></li><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>First Prize, Hubei Province</h3><p>China Mathematical Contest in Modeling</p></div></li><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>National First Prize</h3><p>Teddy Cup Data Mining Challenge</p></div></li><li><span class="award-mark" aria-hidden="true"><svg class="icon"><use href="#icon-star"/></svg></span><div><h3>National First Prize</h3><p>Huazhong Cup Mathematical Modeling Challenge</p></div></li></ul>
         </section>
       </div>
     </div>
     <section class="container contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="contact-panel"><svg class="contact-lines" viewBox="0 0 550 550" fill="none" aria-hidden="true"><g stroke="currentColor"><circle cx="400" cy="270" r="240"/><circle cx="400" cy="270" r="210"/><circle cx="400" cy="270" r="180"/><circle cx="400" cy="270" r="150"/><circle cx="400" cy="270" r="120"/><path d="M160 30 550 500M160 500 550 30"/></g><circle cx="217" cy="116" r="6" fill="currentColor"/></svg><div class="contact-copy"><p class="eyebrow">05 — LET’S CONNECT</p><h2 id="contact-heading">Good research begins<br>with a <em>conversation.</em></h2><p>For research discussions and academic opportunities.</p><a class="contact-email" href="mailto:yli499@connect.hkust-gz.edu.cn">yli499@connect.hkust-gz.edu.cn <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a></div><div class="cv-actions"><a class="button button-mint" href="Yingjin_Li_Academic_CV.pdf" download>Download CV <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg></a><span>Academic CV · PDF</span><span class="english">English proficiency · IELTS 6.5</span></div></div>
+      <div class="contact-panel"><svg class="contact-lines" viewBox="0 0 550 550" fill="none" aria-hidden="true"><g stroke="currentColor"><circle cx="400" cy="270" r="240"/><circle cx="400" cy="270" r="210"/><circle cx="400" cy="270" r="180"/><circle cx="400" cy="270" r="150"/><circle cx="400" cy="270" r="120"/><path d="M160 30 550 500M160 500 550 30"/></g><circle cx="217" cy="116" r="6" fill="currentColor"/></svg><div class="contact-copy"><p class="eyebrow">05 / LET’S CONNECT</p><h2 id="contact-heading">Good research begins<br>with a <em>conversation.</em></h2><p>For research discussions and academic opportunities.</p><a class="contact-email" href="mailto:yli499@connect.hkust-gz.edu.cn">yli499@connect.hkust-gz.edu.cn <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a></div><div class="cv-actions"><a class="button button-mint" href="Yingjin_Li_Academic_CV.pdf" download>Download CV <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg></a><span>Academic CV · PDF</span><span class="english">English proficiency · IELTS 6.5</span></div></div>
     </section>
   </main>
   <footer class="container"><a class="footer-brand" href="#about">Yingjin Li<span>.</span></a><p>© 2026 · Guangzhou, China</p><a class="source-link" href="https://github.com/YingjinLI/yingjinli.github.io">Website source <svg class="icon small" aria-hidden="true"><use href="#icon-external"/></svg></a></footer>
-  <script>
-    const navLinks = [...document.querySelectorAll('.nav-link')];
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => {
-        const visible = entries.filter(entry => entry.isIntersecting);
-        if (!visible.length) return;
-        const sectionId = visible[0].target.id;
-        navLinks.forEach(link => {
-          const active = link.getAttribute('href') === '#' + sectionId;
-          link.classList.toggle('active', active);
-          if (active) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
-      }, { rootMargin: '-10% 0px -55% 0px' });
-      ['about', 'publication-list', 'publications', 'education'].forEach(id => observer.observe(document.getElementById(id)));
-    }
-  </script>
 </body>
 </html>
