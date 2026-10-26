@@ -14,6 +14,7 @@ A personal research observatory for visual anomaly detection, multimodal learnin
 - `specimen-normal.svg`, `specimen-anomaly.svg`: original conceptual artwork for the reconstruction comparison.
 - `fashion-visual.svg`: original conceptual illustration for multimodal retrieval.
 - `profile.png`: original portrait.
+- `road-neurips-2026.jpg`: author-provided screenshot of the NeurIPS 2026 ROAD conference listing, displayed from the ROAD title and NeurIPS links.
 - `Yingjin_Li_Academic_CV.pdf`: the current academic CV.
 - Fonts: self-hosted DM Sans and DM Serif Display, with their OFL license files included.
 
@@ -22,6 +23,8 @@ The site has no build step, analytics, external scripts, external font requests,
 ## Interactions and accessibility
 
 The ROAD example has manually defined responses. The PriSM-AD comparison and localization overlay are conceptual illustrations. Neither is an experimental result or live model output. The hero gallery uses conceptual research illustrations.
+
+The ROAD image viewer supports Escape, a close button, and backdrop dismissal, plus a full-size image link. Image links open the original directly if JavaScript is unavailable.
 
 Controls support keyboard use. The gallery has no continuous animation; hover transitions and the user-triggered driving illustration respect reduced-motion preferences. Core academic content remains readable without JavaScript.
 

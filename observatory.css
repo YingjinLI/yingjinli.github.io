@@ -25,3 +25,27 @@ html:not(.js) .comparison input{display:none!important}
 @media(max-width:960px){.bibliography-authors{font-size:13px}.bibliography-meta cite{font-size:12px}.bibliography-citation{font-size:11px}.study-copy>p:not(.eyebrow){font-size:14px}.experiment-note{font-size:9px}.reasoning-result p{font-size:12px}}
 @media(max-width:760px){.nav-link{font-size:12px;padding:6px 0}.bibliography-authors{font-size:12px}.bibliography-meta cite{font-size:11px}.bibliography-citation{font-size:10px}.study-copy>p:not(.eyebrow){font-size:15px}.experiment-note{font-size:9px}.field-button{min-height:40px}.context-controls button{min-height:34px}}
 @media print{body{background:#fff;font-size:12px}body:before,.masthead,.observatory,.opening-footer,.experiment,.fashion-art,.fashion-number,.publication-tools,.hero-links,.cv-actions,.contact-lines{display:none!important}.container{width:100%;max-width:none}.hero,.study-grid,.prism-grid{display:block;padding:15px 0}.hero-focus{font-size:24px}.hero-intro{max-width:none}.name-row h1{font-size:43px}.identity{margin-top:15px}.portrait-frame{width:70px;height:85px}.bibliography-section,.research-section,.background-wrap,.contact-section{padding:20px 0;background:none;border:0}.section-top{margin-bottom:20px}.section-note{display:none}.publication-entry{break-inside:avoid}.study-copy{order:initial}.research-study{break-inside:avoid}.study-copy h4{font-size:23px}.study-copy h4 br{display:none}.background-grid{gap:40px}.contact-panel{color:#172c31;background:none;padding:20px 0}.contact-copy h2{font-size:28px}.contact-copy p,.contact-email{color:#172c31}h2{font-size:32px}details{display:none}.fashion-study{display:block}footer.container{padding:15px 0}}
+
+/* NeurIPS conference listing image viewer. */
+.paper-proof-link{ text-decoration:underline; text-decoration-color:#356f6355; text-underline-offset:.2em; }
+.paper-proof-link:hover{ text-decoration-color:currentColor; }
+body.image-viewer-open{ overflow:hidden; }
+.paper-image-dialog{ width:min(1440px,calc(100% - 40px)); max-width:none; max-height:calc(100dvh - 40px); margin:auto; padding:0; border:1px solid var(--line); border-radius:12px; background:var(--paper); color:var(--ink); box-shadow:0 24px 80px #0005; }
+.paper-image-dialog:not([open]){ display:none; }
+.paper-image-dialog::backdrop{ background:#10252cbb; }
+.paper-image-header{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 22px; border-bottom:1px solid var(--line); }
+.paper-image-header h2{ font-family:var(--sans); font-size:18px; line-height:1.4; font-weight:600; letter-spacing:0; }
+.paper-image-header form{ margin:0; flex:none; }
+.paper-image-close{ display:flex; align-items:center; gap:12px; min-height:44px; padding:8px 14px; border:1px solid var(--line); border-radius:5px; font-size:13px; }
+.paper-image-close:hover{ background:#e4e9df; }
+.paper-image-close span{ font-size:22px; line-height:1; }
+.paper-image-stage{ display:block; background:#fff; cursor:zoom-in; }
+.paper-image-stage img{ width:100%; height:auto; max-height:calc(100dvh - 210px); object-fit:contain; }
+.paper-image-footer{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding:16px 22px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
+.paper-image-footer .text-link{ margin:0; font-size:12px; }
+@media(max-width:760px){
+  .paper-image-dialog{ width:calc(100% - 20px); max-height:calc(100dvh - 20px); border-radius:8px; }
+  .paper-image-header,.paper-image-footer{ padding:12px 14px; }
+  .paper-image-header h2{ font-size:15px; }
+}
+@media print{ .paper-image-dialog{ display:none!important; } }

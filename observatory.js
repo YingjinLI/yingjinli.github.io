@@ -63,6 +63,34 @@
     one('#comparison-state').textContent = active ? 'Schematic localization overlay' : 'Input ↔ Normal prior';
   });
 
+  // Image links remain usable without JavaScript or native dialog support.
+  const paperImageDialog = one('#road-image-dialog');
+  if (paperImageDialog && typeof paperImageDialog.showModal === 'function') {
+    let imageTrigger;
+    all('[data-road-image]').forEach(link => {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.setAttribute('aria-controls', paperImageDialog.id);
+      link.addEventListener('click', event => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        imageTrigger = link;
+        paperImageDialog.showModal();
+        document.body.classList.add('image-viewer-open');
+      });
+    });
+    paperImageDialog.addEventListener('click', event => {
+      if (event.target !== paperImageDialog) return;
+      const bounds = paperImageDialog.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) {
+        paperImageDialog.close();
+      }
+    });
+    paperImageDialog.addEventListener('close', () => {
+      document.body.classList.remove('image-viewer-open');
+      imageTrigger?.focus({ preventScroll: true });
+    });
+  }
+
   let scrollPending = false;
   const navigation = all('.nav-link');
   const sections = ['about', 'publication-list', 'publications', 'education'].map(id => document.getElementById(id));
